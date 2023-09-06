@@ -19,6 +19,10 @@ DEVICE_PATH := device/motorola/dubai
 # Inherit from motorola sm7325-common
 include device/motorola/sm7325-common/BoardConfigCommon.mk
 
+# Art
+WITH_DEXPREOPT_DEBUG_INFO := false
+USE_DEX2OAT_DEBUG := false
+
 # Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := dubai
 
