@@ -14,11 +14,11 @@ $(call inherit-product, device/motorola/dubai/device.mk)
 # Inherit some common DerpFest stuff.
 $(call inherit-product, vendor/derp/config/common_full_phone.mk)
 
-PRODUCT_NAME := derp_dubai
+PRODUCT_NAME := spark_dubai
 PRODUCT_DEVICE := dubai
 PRODUCT_MANUFACTURER := motorola
 PRODUCT_BRAND := motorola
-PRODUCT_MODEL := motorola edge 30
+PRODUCT_MODEL := Motorola Edge 30
 
 PRODUCT_GMS_CLIENTID_BASE := android-motorola
 
@@ -32,12 +32,21 @@ BUILD_FINGERPRINT := motorola/dubai_g/dubai:13/T1RD33.116-33-3/f829db-a0c97:user
 PRODUCT_PACKAGES += \
     RemovePackages
 
-# Derp
+# Spark
 WITH_GMS := true
+WITH_GAPPS := true
 TARGET_GAPPS_ARCH := arm64
 TARGET_BOOT_ANIMATION_RES := 1080
+
+# Spark
+TARGET_HAS_UDFPS := true
+TARGET_ENABLE_BLUR := true
 TARGET_FACE_UNLOCK_SUPPORTED := true
-EXTRA_UDFPS_ANIMATIONS := true
-TARGET_NOT_USES_BLUR := true
 TARGET_SUPPORTS_QUICK_TAP := true
-TARGET_EXCLUDES_AUDIOFX := true
+TARGET_HAS_UDFPS := true
+EXTRA_UDFPS_ANIMATIONS := true
+TARGET_SUPPORTS_QUICK_TAP := true
+TARGET_INCLUDE_PIXEL_CHARGER := true
+TARGET_SUPPORTS_GOOGLE_RECORDER := true
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+    ro.spark.maintainer=Shaka98

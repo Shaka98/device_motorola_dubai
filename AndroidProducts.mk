@@ -15,9 +15,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/derp_dubai.mk
+    $(LOCAL_DIR)/spark_dubai.mk
 
 COMMON_LUNCH_CHOICES := \
-    derp_dubai-user \
-    derp_dubai-userdebug \
-    derp_dubai-eng
+    spark_dubai-user \
+    spark_dubai-userdebug \
+    spark_dubai-eng
