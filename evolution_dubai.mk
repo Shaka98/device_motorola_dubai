@@ -11,10 +11,10 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from dubai device
 $(call inherit-product, device/motorola/dubai/device.mk)
 
-# Inherit some common DerpFest stuff.
-$(call inherit-product, vendor/derp/config/common_full_phone.mk)
+# Inherit some common EvoX stuff.
+$(call inherit-product, vendor/evolution/config/common_full_phone.mk)
 
-PRODUCT_NAME := derp_dubai
+PRODUCT_NAME := evolution_dubai
 PRODUCT_DEVICE := dubai
 PRODUCT_MANUFACTURER := motorola
 PRODUCT_BRAND := motorola
@@ -32,12 +32,8 @@ BUILD_FINGERPRINT := motorola/dubai_g/dubai:13/T1RD33.116-33-3/f829db-a0c97:user
 PRODUCT_PACKAGES += \
     RemovePackages
 
-# Derp
+# Evolution X
 WITH_GMS := true
 TARGET_GAPPS_ARCH := arm64
 TARGET_BOOT_ANIMATION_RES := 1080
 TARGET_FACE_UNLOCK_SUPPORTED := true
-EXTRA_UDFPS_ANIMATIONS := true
-TARGET_NOT_USES_BLUR := true
-TARGET_SUPPORTS_QUICK_TAP := true
-TARGET_EXCLUDES_AUDIOFX := true
