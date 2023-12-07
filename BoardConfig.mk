@@ -31,7 +31,7 @@ TARGET_SURFACEFLINGER_UDFPS_LIB := //$(DEVICE_PATH):libudfps_extension.dubai
 SOONG_CONFIG_qtidisplay_udfps := true
 
 # Firmware
--include vendor/motorola/dubai-firmware/BoardConfigVendor.mk
+-include vendor/motorola/firmware/dubai/config.mk
 
 # HIDL
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += $(DEVICE_PATH)/device_framework_matrix_dubai.xml
