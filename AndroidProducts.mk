@@ -15,9 +15,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/derp_dubai.mk
+    $(LOCAL_DIR)/aosp_dubai.mk
 
 COMMON_LUNCH_CHOICES := \
-    derp_dubai-user \
-    derp_dubai-userdebug \
-    derp_dubai-eng
+    aosp_dubai-user \
+    aosp_dubai-userdebug \
+    aosp_dubai-eng

@@ -37,7 +37,6 @@ $(call inherit-product, device/motorola/sm7325-common/common.mk)
 # Overlay
 PRODUCT_PACKAGES += \
     FrameworksResDubai \
-    LineageSystemUIDubai \
     NfcResDubai \
     SettingsResDubai \
     SettingsProviderResDubai \
@@ -59,9 +58,9 @@ PRODUCT_PACKAGES += \
     DubaiCameraService \
     libgui_shim_vendor
 
-# Dex
+# Dex/ART optimization
 PRODUCT_ART_TARGET_INCLUDE_DEBUG_BUILD := false
-PRODUCT_DEX_PREOPT_DEFAULT_COMPILER_FILTER := verify
+PRODUCT_DEX_PREOPT_DEFAULT_COMPILER_FILTER := everything
 USE_DEX2OAT_DEBUG := false
 
 # Display
@@ -121,7 +120,7 @@ PRODUCT_SOONG_NAMESPACES += $(LOCAL_PATH)
 
 # Thermal
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/thermal-engine-dubai.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal-engine-dubai.conf
+    $(LOCAL_PATH)/configs/thermal-engine-dubai-game-perf.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal-engine-dubai.conf
 
 # Inherit from vendor blobs
 $(call inherit-product, vendor/motorola/dubai/dubai-vendor.mk)
