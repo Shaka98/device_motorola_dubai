@@ -28,10 +28,6 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
 
 BUILD_FINGERPRINT := motorola/dubai_g/dubai:13/T1RD33.116-33-13/441420-2d5de8:user/release-keys
 
-# Remove unwanted packages
- PRODUCT_PACKAGES += \
-    RemovePackages
-
 # Pixel Extras
 WITH_GMS := true
 TARGET_BOOT_ANIMATION_RES := 1080
